@@ -40,6 +40,7 @@ or
 
 [uuid](github.com/satori/go.uuid/)
 [go-redis](github.com/go-redis/redis)
+[progressbar](github.com/schollz/progressbar)
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
