@@ -15,7 +15,7 @@ import (
 
 var (
   redisClient *redis.Client
-  keyNum,errNum *int64
+  keyNum,errNum,INCR *int64
   maxNum int64
   host,pwd,lon,prefix string
   port,maxThread,pool int
@@ -28,9 +28,11 @@ func init(){
   runtime.GOMAXPROCS(runtime.NumCPU())
   keyAddress := int64(0)
   errAddress := int64(0)
+  IncrAddress := int64(0)
   keyNum,errNum = &keyAddress,&errAddress
+  INCR = &IncrAddress
   flag.BoolVar(&h, "h", false, "this help")
-  flag.BoolVar(&wOrR, "w", true, "true means write,false means read")
+  flag.BoolVar(&wOrR, "w", false, "true means write,false means read")
   flag.BoolVar(&orderON, "o", false, "true means write by an ordered positive number, false means write by random string")
   flag.StringVar(&lon, "t", "1m", "test time;you can use these units:s,m,h")
   flag.StringVar(&host, "host", "10.0.18.183", "redis host")

@@ -4,6 +4,7 @@ import (
 	"os"
 	sig "os/signal"
 	"log"
+	"fmt"
 )
 
 type SignalHandle func()
@@ -25,12 +26,14 @@ func init() {
 	go func() {
 		for {
 			sig := <-sigalCh
+			fmt.Println("")
             log.Printf("recv signal:%v\n", sig)
 			if handlers, ok := sigHandlesMgt[sig]; ok {
 				for _, handler := range handlers {
 					handler()
 				}
 			} else {
+				fmt.Println("")
 				log.Printf("unkown signal:%v\n", sig)
 			}
 		}

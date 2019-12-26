@@ -22,7 +22,7 @@ go build
 
 Example
 
-./siege-redis -host 10.0.18.183 -port 6379 -a icR3TZHiL -m 1 -pool 1 -t 1m
+./siege-redis -host 10.0.18.183 -port 6379 -a icR3TZHiL -m 1 -pool 1 -t 1m -w -o
 
 It is as simple as doing this
 
@@ -35,6 +35,9 @@ or
 ./siege-redis --help
 
 ## Thanks
+
+[echosimple](https://www.zcool.com.cn/u/15027113)
+
 [uuid](github.com/satori/go.uuid/)
 [go-redis](github.com/go-redis/redis)
 
