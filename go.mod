@@ -1,9 +1,9 @@
 module github.com/Zfzlv/siege-redis
 
-go 1.12
+go 1.13
 
 require (
-	github.com/gizak/termui/v3 v3.1.0 // indirect
+	github.com/gizak/termui/v3 v3.1.0
 	github.com/go-redis/redis v6.15.6+incompatible
 	github.com/kr/pretty v0.1.0 // indirect
 	github.com/onsi/ginkgo v1.11.0 // indirect
